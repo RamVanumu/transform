@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transform Property</title>
+    <style>
+      .box {
+        width: 200px;
+        margin: 10px auto;
+        padding: 10px;
+        border: 1px solid black;
+        font-family: sans-serif;
+        text-align: center;
+        display: block;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .scale:hover {
+        transform: scale(1.2);
+      }
+
+      .rotate:hover {
+        transform: rotate(30deg);
+      }
+
+      .translate:hover {
+        transform: translateX(20px);
+      }
+
+      .skew:hover {
+        transform: skewX(20deg);
+      }
+
+      .spin:hover {
+        animation: spin-effect;
+        animation-duration: 1s;
+      }
+      @keyframes spin-effect {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .fade:hover {
+        animation: fade-effect;
+        animation-duration: 1s;
+      }
+      @keyframes fade-effect {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      .flip:hover {
+        transform: rotateY(180deg);
+      }
+
+      .multi:hover {
+        transform: scale(1.2) rotate(15deg) translateX(10px) skewY(10deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box scale">
+      <h3>Scale</h3>
+      <p>Increases the size of the element on hover.</p>
+    </div>
+
+    <div class="box rotate">
+      <h3>Rotate</h3>
+      <p>Rotates the element on hover.</p>
+    </div>
+
+    <div class="box translate">
+      <h3>Translate</h3>
+      <p>Moves the element on hover.</p>
+    </div>
+
+    <div class="box skew">
+      <h3>Skew</h3>
+      <p>Tilts the element on hover.</p>
+    </div>
+
+    <div class="box spin">
+      <h3>Spin</h3>
+      <p>Spins the element on hover.</p>
+    </div>
+
+    <div class="box fade">
+      <h3>Fade</h3>
+      <p>Fades the element in and out on hover.</p>
+    </div>
+
+    <div class="box flip">
+      <h3>Flip</h3>
+      <p>Flips the element like a card.</p>
+    </div>
+
+    <div class="box multi">
+      <h3>Multiple Transforms</h3>
+      <p>Combining scale, rotate, translate, and skew.</p>
+    </div>
+  </body>
+</html>
